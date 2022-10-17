@@ -1,3 +1,5 @@
+## Code for parallelisation of Example 1 - Estimating Pi
+
 from parallel.backends import BackendMPI as Backend
 import numpy as np
 import datetime
