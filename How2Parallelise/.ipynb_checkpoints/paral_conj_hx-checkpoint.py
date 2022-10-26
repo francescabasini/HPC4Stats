@@ -10,7 +10,7 @@ backend = Backend()
 mu = 9.2
 sigma = 3.9
 
-N = 100000
+N = 1000000
 rng = np.random.RandomState(seed  = 19)
 
 data_Xi = rng.normal(mu, sigma, N) 
@@ -19,7 +19,7 @@ data_Xi = rng.normal(mu, sigma, N)
 X_bds = backend.broadcast(data_Xi)
 
 # Hyper-parameters
-mu_0 = 9
+mu_0 = 9.1
 sigma_0 = 0.7
 
 # Posterior Predictive for one sample
@@ -63,4 +63,4 @@ np.savetxt('estimates_hx_ex2.csv', h_x_estimates, delimiter=",")
 print("Done in {} seconds and {} microseconds".format(time_delta.seconds, time_delta.microseconds/1e6))
 
 
-#mpirun -np 4 python3 pmcabc_gaussian.py
+#mpirun -np 4 python3 paral_conj_hx.py

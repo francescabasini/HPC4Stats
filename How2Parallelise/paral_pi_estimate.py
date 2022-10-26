@@ -32,3 +32,5 @@ time_delta = time_end - time_start
 # saving data
 np.savetxt('estimates_pi.csv', np.array(accepted_parameters), delimiter=",")
 print("Done in {} seconds and {} microseconds".format(time_delta.seconds, time_delta.microseconds/1e6))
+
+#mpirun -np 4 python3 paral_pi_estimate.py
