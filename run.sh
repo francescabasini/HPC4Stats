@@ -15,10 +15,9 @@ export OMP_NUM_THREADS=$MY_NUM_THREADS
 
 module purge
 
-module load intel/2019.3.199-GCC-8.3.0-2.32
-module load GCC/7.3.0-2.30
-module load OpenMPI/3.1.1
-module load Python/3.6.6
+module load GCC/11.2.0 
+module load OpenMPI/4.1.1
+module load SciPy-bundle/2021.10
 
 source ~/env/bin/activate
 
